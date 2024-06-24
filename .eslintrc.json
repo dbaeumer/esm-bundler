@@ -1,0 +1,40 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"project": [
+			"./tsconfig.json"
+		]
+	},
+    "plugins": [
+        "@typescript-eslint"
+    ],
+	"env": {
+		"node": true
+	},
+	"rules": {
+        "semi": "off",
+        "@typescript-eslint/semi": "error",
+		"@typescript-eslint/member-delimiter-style": ["error" ,{
+			"multiline": {
+			  "delimiter": "semi",
+			  "requireLast": true
+			},
+			"singleline": {
+			  "delimiter": "semi",
+			  "requireLast": false
+			},
+			"multilineDetection": "brackets"
+		}],
+		"no-extra-semi": "warn",
+		"curly": "warn",
+		"quotes": ["error", "single", { "allowTemplateLiterals": true } ],
+		"eqeqeq": "error",
+		"indent": "off",
+		"@typescript-eslint/indent": ["warn", "tab", { "SwitchCase": 1 } ],
+		"@typescript-eslint/prefer-as-const": "error",
+		"@typescript-eslint/no-floating-promises": "error",
+		"@typescript-eslint/no-unsafe-assignment": "error"
+	}
+}

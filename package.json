@@ -1,0 +1,34 @@
+{
+	"name": "esm-bundler",
+	"private": "true",
+	"publisher": "vscode-samples",
+	"version": "0.1.0",
+	"description": "Using WASM WASI with ESM and bundler",
+	"author": "MS",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.77.0"
+	},
+	"main": "./dist/desktop/extension.js",
+	"browser": "./dist/web/extension.js",
+	"activationEvents": [
+	],
+	"extensionDependencies": [
+		"ms-vscode.wasm-wasi-core"
+	],
+	"devDependencies": {
+		"@types/vscode": "1.77.0",
+		"typescript": "^5.5.2",
+		"eslint": "^8.57.0",
+		"@typescript-eslint/eslint-plugin": "^7.13.1",
+		"@typescript-eslint/parser": "^7.13.1"
+	},
+	"dependencies": {
+		"serialize-error": "11.0.3",
+		"@vscode/wasm-wasi": "1.0.0-pre.2"
+	},
+	"scripts": {
+		"build": "npm run compile:ts && npm run build:wasi && npm run esbuild",
+		"compile:ts": "tsc -p tsconfig.json"
+	}
+}
