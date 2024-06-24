@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"skipLibCheck": true,
+		"lib": [ "ES2020"],
+		"types": ["vscode", "node"],
+		"composite": true
+	},
+	"include": ["."],
+	"references": [
+		{ "path": "../common/tsconfig.json" }
+	]
+}

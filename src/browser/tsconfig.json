@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"skipLibCheck": true,
+		"lib": [ "ES2020", "WebWorker"],
+		"types": ["vscode"],
+		"composite": true
+	},
+	"include": ["."],
+	"references": [
+		{ "path": "../common/tsconfig.json" }
+	]
+}

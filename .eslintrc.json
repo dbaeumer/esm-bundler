@@ -4,7 +4,10 @@
 		"ecmaVersion": 2020,
 		"sourceType": "module",
 		"project": [
-			"./tsconfig.json"
+			"./tsconfig.json",
+			"./src/common/tsconfig.json",
+			"./src/desktop/tsconfig.json",
+			"./src/browser/tsconfig.json"
 		]
 	},
     "plugins": [

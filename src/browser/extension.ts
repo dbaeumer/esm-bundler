@@ -3,16 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Wasm } from '@vscode/wasm-wasi/v1';
-import { serializeError, type ErrorObject } from 'serialize-error';
+import { runWasm } from '../common/wasm';
 import { ExtensionContext } from 'vscode';
 
 export async function activate(context: ExtensionContext) {
-
-	// Load the WASM API
-	const wasm: Wasm = await Wasm.load();
-
-	const errorObject:ErrorObject = serializeError(new Error('test'));
+	runWasm();
 
 	const x: string = foo();
 }
